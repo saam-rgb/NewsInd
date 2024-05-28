@@ -25,3 +25,10 @@ To get started with this project, follow these steps:
 4. Obtain an API key from [NewsAPI](https://newsapi.org/) and add it to your environment variables.
 5. Start the development server: `npm run dev`
 6. Open your browser and navigate to `http://localhost:3000` to view the website.
+
+## Website Design
+
+https://github.com/saam-rgb/NewsInd/assets/54792494/3453e25a-ca1e-48c9-a27c-644b011e78f0
+
+
+
