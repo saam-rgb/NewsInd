@@ -1,23 +1,22 @@
-import { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
+import usefetch from '../Hooks/usefetch'
+import Loading from "./Loading";
 
+// eslint-disable-next-line react/prop-types
 const NewsBoard = ({ category }) => {
-  const [articles, setArticles] = useState([]);
-  useEffect(() => {
-    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${
-      import.meta.env.VITE_API_KEY
-    }`;
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setArticles(data.articles));
-  }, [category]);
 
+  const data = usefetch(category)
+
+  //Early return
+  if(data === null){return <Loading/>}
+ 
   return (
     <div>
       <h2 className="text-center mt-3">
         Latest <span className="text-danger">News</span>
       </h2>
-      {articles.map((news, index) => {
+      <div className="d-flex flex-wrap justify-content-center">
+        {data.map((news, index) => {
         return (
           <NewsItem
             key={index}
@@ -27,7 +26,8 @@ const NewsBoard = ({ category }) => {
             url={news.url}
           />
         );
-      })}
+      }).reverse()} 
+      </div>
     </div>
   );
 };

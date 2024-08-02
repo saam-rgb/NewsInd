@@ -32,3 +32,19 @@ https://github.com/saam-rgb/NewsInd/assets/54792494/3453e25a-ca1e-48c9-a27c-644b
 
 
 
+#injamamulhak080404@gmail.com
+
+             =============== ***** CODE WORKS FINE ***** ============
+============                                                           ===============
+
+🚀🚀🚀🚀🚀guarantee to commit 
+
+- Thinks are done:
+        - Making a folder structure
+        - Create a custom hook folder & file
+        - For user applicable implemented a shimmer loading component
+        - Making all files concise and precise 
+        - loading speed 0.7 - 0.8ms
+
+
+

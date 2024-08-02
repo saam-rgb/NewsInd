@@ -1,4 +1,12 @@
+import { navbar } from "../constant/utils";
+
+// eslint-disable-next-line react/prop-types
 const Navbar = ({ setCategory }) => {
+  
+  const linksChange = (link) =>{
+    setCategory(link)
+  }
+
   return (
     <div>
       <nav
@@ -20,60 +28,15 @@ const Navbar = ({ setCategory }) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item">
+              {navbar.links.map((links, index)=>(
+                 <li key={index} className="nav-item btn">
                 <div
                   className="nav-link"
-                  onClick={() => {
-                    setCategory("technology");
-                  }}>
-                  Technology
+                  onClick={()=> linksChange(links)}>
+                  {links[0].toUpperCase() + links.slice(1)}
                 </div>
               </li>
-              <li className="nav-item">
-                <div
-                  className="nav-link"
-                  onClick={() => {
-                    setCategory("business");
-                  }}>
-                  Business
-                </div>
-              </li>
-              <li className="nav-item">
-                <div
-                  className="nav-link"
-                  onClick={() => {
-                    setCategory("health");
-                  }}>
-                  Health
-                </div>
-              </li>
-              <li className="nav-item">
-                <div
-                  className="nav-link"
-                  onClick={() => {
-                    setCategory("science");
-                  }}>
-                  Science
-                </div>
-              </li>
-              <li className="nav-item">
-                <div
-                  className="nav-link"
-                  onClick={() => {
-                    setCategory("sports");
-                  }}>
-                  Sports
-                </div>
-              </li>
-              <li className="nav-item">
-                <div
-                  className="nav-link"
-                  onClick={() => {
-                    setCategory("entertainment");
-                  }}>
-                  Entertainment
-                </div>
-              </li>
+              ))}       
             </ul>
           </div>
         </div>
